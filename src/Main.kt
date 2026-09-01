@@ -1,9 +1,12 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    val myTemp = Temperature(Temperature.Unit.K)
+    val c = Celsius(100.0)
+    val f = Fahrenheit(32.0)
+    val k = Kelvin(0.0)
 
-    myTemp.setTemp(32.0)
+    println("100 C in F: ${c.getTempIn(Temperature.Unit.F)}")
+    println("32 F in C: ${f.getTempIn(Temperature.Unit.C)}")
+    println("0 K in C: ${k.getTempIn(Temperature.Unit.C)}")
 
-    println("The temperature is ${myTemp.getTemp(Temperature.Unit.F)}")
+    c.setTemp(37.0)
+    println("37 C in F: ${c.getTempIn(Temperature.Unit.F)}")
 }
